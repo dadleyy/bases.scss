@@ -1,6 +1,8 @@
 # bases
 
-One of the pitfalls I've run into in the past when using sass is making my styles too specific. For example,
+Inspired by [expressive css](http://johnpolacek.github.io/expressive-css), this package aims at creating a set of classes that can be used to avoid the need to apply common css properties to components in sass. Instead, the properies are applied as classes inside the application's markup/template files, isolating the codebase growth to those files.
+
+One of the pitfalls codebases may run into when using sass is making styles too specific. For example,
 
 ```sass
 .user-login .input-field .input
@@ -25,6 +27,47 @@ To avoid this, [bases](https://github.com/dadleyy/bases.scss) creates class sele
     .float-left
       input.width-100.border-1.border-color-white-darken-10(type="input")
 ```
+
+## Using w/ bower
+
+To use the classes provided by this package, install using [bower](https://bower.io) and add the `bases` file to your include paths during build.
+
+```
+$ bower i bases.scss
+```
+
+Then, in your project's `gulpfile.js` for example:
+
+```js
+gulp.task("sass", ["clean:css"], function() {
+  let source = [
+    "./src/sass/app.sass"
+  ];
+
+  let conf = {
+    includePaths: [
+      "./bower_components/bases.scss/src"
+    ]
+  };
+
+  return gulp.src(source)
+    .pipe(sass(conf).on("error", sass.logError))
+    .pipe(gulp.dest("./assets/css"));
+});
+```
+
+### Building
+
+If you'd rather use a built version of this package, you can compile the minified file by running `gulp:release`.
+
+```
+$ git clone https://github.com/dadleyy/bases.scss.git ./bases
+$ cd bases
+$ npm i
+$ ./node_modules/.bin/gulp release
+```
+
+Once complete, you will have a `bases.min.css` file in the `dist/` directory.
 
 ## License
 
