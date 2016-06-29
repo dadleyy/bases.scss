@@ -1,0 +1,9 @@
+html
+  +color-classes("white", rgba(255,255,255,1.0), "w")
+  +color-classes("black", rgba(0,0,0,1.0), "b")
+
+  @for $i from 0 through 25
+    $amount: $i * 2
+    +color-classes("black-lighten-#{$i}", lighten(rgba(0,0,0,1.0), $amount), "b-l-#{$i}")
+    +color-classes("white-darken-#{$i}", darken(rgba(255,255,255,1.0), $amount), "w-d-#{$i}")
+

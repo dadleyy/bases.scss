@@ -1,0 +1,15 @@
+.border-none
+  border: none
+
+@for $i from 0 through 10
+  $sides: ("top", "right", "left", "bottom")
+
+  .border-#{$i}
+    border-width: $i + unquote("px")
+    border-style: solid
+
+  @each $side in $sides
+    .border-#{$side}
+      border-#{$side}-width: $i
+      border-#{$side}-style: solid
+

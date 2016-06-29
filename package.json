@@ -1,0 +1,15 @@
+{
+  "name": "bases.scss",
+  "version": "1.0.0",
+  "description": "a utility sass framework that covers all the normal bases",
+  "author": "Danny Hadley <dadleyy@gmail.com>",
+  "homepage": "https://github.com/dadleyy/bases.scss",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  }
+}

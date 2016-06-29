@@ -1,0 +1,20 @@
+.width-auto
+  width: auto
+
+.height-auto
+  height: auto
+
+@for $i from 0 through 100
+  $amount: $i * 10
+ 
+  .height-vh#{$i}
+    height: $amount + unquote("vh")
+   
+  .height-#{$i}
+    height: $amount + unquote("%")
+
+  .width-vw#{$i}
+    width: $amount + unquote("vw")
+
+  .width-#{$i}
+    width: $amount + unquote("%")

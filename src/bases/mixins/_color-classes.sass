@@ -1,0 +1,27 @@
+@mixin color-classes($name, $color, $short_name)
+
+  .bg-#{$name}, .bg-#{$short_name}
+    background-color: $color
+
+  .fg-#{$name}, .fg-#{$short_name}
+    color: $color
+
+    &:after
+      color: $color
+
+  .border-color-#{$name}, .border-color-#{$short_name}
+    border-color: $color
+
+  $sides: ("top", "right", "left", "bottom")
+
+  @each $side in $sides
+    .border-color-#{$side}-#{$name}, .border-color-#{$side}-#{$short_name}
+      border-#{$side}-color: $color
+
+  .border-color-tb-#{$name}, .border-color-tb-#{$short_name}
+      border-top-color: $color
+      border-bottom-color: $color
+
+  .border-color-rl-#{$name}, .border-color-rl-#{$short_name}
+      border-right-color: $color
+      border-left-color: $color

@@ -1,0 +1,17 @@
+@for $i from 0 through 40
+  $amount: $i * 0.1
+
+  .margin-#{$i}
+    margin: $amount + unquote("rem")
+
+  .padding-#{$i}
+    padding: $amount + unquote("rem")
+
+  $sides: ("top", "right", "left", "bottom")
+  @each $side in $sides
+    .margin-#{$side}-#{$i}
+      margin-#{$side}: $amount + unquote("rem")
+
+    .padding-#{$side}-#{$i}
+      padding-#{$side}: $amount + unquote("rem")
+
