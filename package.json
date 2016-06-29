@@ -5,6 +5,9 @@
   "author": "Danny Hadley <dadleyy@gmail.com>",
   "homepage": "https://github.com/dadleyy/bases.scss",
   "license": "ISC",
+  "scripts": {
+    "build:release": "./node_modules/.bin/gulp release"
+  },
   "dependencies": {
     "del": "^2.2.1",
     "gulp": "^3.9.1",
