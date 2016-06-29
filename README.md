@@ -1,4 +1,4 @@
-# bases
+# bases ![shield](https://img.shields.io/bower/v/bases.scss.svg?maxAge=10)
 
 Inspired by [expressive css](http://johnpolacek.github.io/expressive-css), this package aims at creating a set of classes that can be used to avoid the need to apply common css properties to components in sass. Instead, the properies are applied as classes inside the application's markup/template files, isolating the codebase growth to those files.
 
