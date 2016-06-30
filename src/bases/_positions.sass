@@ -1,5 +1,23 @@
 .position-relative
   position: relative
 
+.position-fixed
+  position: fixed
+
 .position-absolute
   position: absolute
+
+@for $i from 0 through 50
+  $percent: ($i * 2) + unquote("%")
+
+  .rigth-#{$i}
+    right: #{$percent}
+
+  .bottom-#{$i}
+    bottom: #{$percent}
+
+  .left-#{$i}
+    left: #{$percent}
+
+  .top-#{$i}
+    top: #{$percent}

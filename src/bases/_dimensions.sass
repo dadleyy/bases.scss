@@ -4,16 +4,16 @@
 .height-auto
   height: auto
 
-@for $i from 0 through 20
-  $amount: $i * 5
+@for $i from 0 through 50
+  $amount: $i * 2
  
-  .height-vh#{$i}
+  .height-vh#{$i}, .height-#{$i}-vh
     height: $amount + unquote("vh")
    
   .height-#{$i}
     height: $amount + unquote("%")
 
-  .width-vw#{$i}
+  .width-vw#{$i}, .width-#{$i}-vw
     width: $amount + unquote("vw")
 
   .width-#{$i}
