@@ -10,6 +10,6 @@
 
   @each $side in $sides
     .border-#{$side}-#{$i}
-      border-#{$side}-width: $i
+      border-#{$side}-width: $i + unquote("px")
       border-#{$side}-style: solid
 
