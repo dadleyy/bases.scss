@@ -9,7 +9,7 @@
     border-style: solid
 
   @each $side in $sides
-    .border-#{$side}
+    .border-#{$side}-#{$i}
       border-#{$side}-width: $i
       border-#{$side}-style: solid
 
